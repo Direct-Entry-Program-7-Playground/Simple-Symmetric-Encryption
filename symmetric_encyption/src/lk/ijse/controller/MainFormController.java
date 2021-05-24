@@ -12,4 +12,8 @@ public class MainFormController {
 
     public void btnDecryptForm_onAction(ActionEvent actionEvent) {
     }
+
+    public void formLoad(String location){
+
+    }
 }
