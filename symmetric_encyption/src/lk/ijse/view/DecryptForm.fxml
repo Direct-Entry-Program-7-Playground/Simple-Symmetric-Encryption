@@ -1,50 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="430.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DecryptFormController">
+<VBox alignment="CENTER_RIGHT" prefWidth="680.0" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DecryptFormController">
    <children>
-      <TextArea fx:id="txtToDecrypt" layoutX="165.0" layoutY="50.0" prefHeight="100.0" prefWidth="0.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="70.0">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </TextArea>
-      <TextArea fx:id="txtDecryptedText" layoutX="196.0" layoutY="320.0" prefHeight="100.0" prefWidth="0.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="310.0" />
-      <TextField fx:id="txtEncryptKey" layoutX="200.0" layoutY="202.0" prefHeight="30.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="190.0">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </TextField>
-      <Label alignment="CENTER" layoutX="236.0" layoutY="65.0" prefHeight="50.0" text="Decryption" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <font>
-            <Font size="28.0" />
-         </font>
-      </Label>
-      <Label layoutX="20.0" layoutY="70.0" prefHeight="100.0" prefWidth="150.0" text="Text to Decrypt" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="70.0">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Label>
-      <Label layoutX="30.0" layoutY="180.0" prefHeight="30.0" prefWidth="150.0" text="Encryption Key" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="190.0">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Label>
-      <Label layoutX="261.0" layoutY="352.0" prefHeight="100.0" prefWidth="150.0" text="Decrypted Text" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Label>
-      <Button fx:id="btnEncrypt" layoutX="30.0" layoutY="236.0" mnemonicParsing="false" onAction="#btnEncrypt_onAction" prefHeight="50.0" text="Decrypt" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="240.0">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Button>
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="100.0" prefWidth="150.0" text="Cypher">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="txtToDecrypt" prefHeight="100.0" prefWidth="0.0" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextArea>
+            <Button fx:id="btnPasteCypher" mnemonicParsing="false" onAction="#btnPasteCypher_onAction" prefHeight="100.0" prefWidth="80.0">
+               <graphic>
+                  <FontAwesomeIconView fx:id="btn" glyphName="PASTE" size="30" />
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <HBox spacing="20.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="150.0" text="Encryption Key">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtEncryptKey" prefHeight="30.0" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="50.0" prefWidth="640.0" spacing="20.0">
+         <children>
+            <AnchorPane prefHeight="50.0" prefWidth="150.0" HBox.hgrow="NEVER" />
+            <Button fx:id="btnEncrypt" defaultButton="true" mnemonicParsing="false" onAction="#btnEncrypt_onAction" prefHeight="50.0" prefWidth="470.0" text="Decrypt">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <HBox spacing="20.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="150.0" text="Original Text">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="txtOriginal" prefHeight="100.0" prefWidth="0.0" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="16.0" />
+               </font></TextArea>
+         </children>
+      </HBox>
    </children>
-</AnchorPane>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
