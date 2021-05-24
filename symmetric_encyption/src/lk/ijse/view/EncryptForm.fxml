@@ -10,6 +10,26 @@
 
 <AnchorPane prefHeight="430.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.EncryptFormController">
    <children>
+      <TextArea fx:id="txtToEncrypt" layoutX="155.0" layoutY="40.0" prefHeight="100.0" prefWidth="0.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="70.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextArea>
+      <TextField fx:id="txtEncryptKey" layoutX="190.0" layoutY="192.0" prefHeight="30.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="190.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextArea fx:id="txtEncryptedText" layoutX="186.0" layoutY="310.0" prefHeight="100.0" prefWidth="0.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="310.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextArea>
+      <Button fx:id="btnEncrypt" layoutX="20.0" layoutY="226.0" mnemonicParsing="false" onAction="#btnEncrypt_onAction" prefHeight="50.0" text="Encrypt" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="240.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
       <Label alignment="CENTER" layoutX="226.0" layoutY="55.0" prefHeight="50.0" text="Encryption" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <font>
             <Font size="28.0" />
@@ -30,13 +50,5 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Button fx:id="btnEncrypt" layoutX="20.0" layoutY="226.0" mnemonicParsing="false" onAction="#btnEncrypt_onAction" prefHeight="50.0" text="Encrypt" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="240.0">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Button>
-      <TextArea fx:id="txtToEncrypt" layoutX="155.0" layoutY="40.0" prefHeight="100.0" prefWidth="0.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="70.0" />
-      <TextArea fx:id="txtEncryptedText" layoutX="186.0" layoutY="310.0" prefHeight="100.0" prefWidth="0.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="310.0" />
-      <TextField fx:id="txtEncryptKey" layoutX="190.0" layoutY="192.0" prefHeight="30.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="190.0" />
    </children>
 </AnchorPane>

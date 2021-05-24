@@ -21,7 +21,6 @@ public class MainFormController {
 
     public void btnDecryptForm_onAction(ActionEvent actionEvent) throws IOException {
         formLoad("/lk/ijse/view/DecryptForm.fxml", "Decryption");
-
     }
 
     public void formLoad(String location, String title) throws IOException {
